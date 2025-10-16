@@ -101,7 +101,7 @@ def parse_candles(raw: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 # ------------------ DETECTION ------------------
 
-def detect_sweep_and_green(candles_15m: List[Dict[str, Any]], lookback: int = 6) -> Dict[str, Any]]:
+def detect_sweep_and_green(candles_15m: List[Dict[str, Any]], lookback: int = 6) -> Dict[str, Any]:
     """Detect liquidity sweep + green confirm candle on 15m."""
     if len(candles_15m) < lookback + 2:
         return {"signal": False, "reason": "not_enough_data"}
@@ -215,7 +215,7 @@ def format_plan_message(a):
 
 def job_pre_alert():
     now = datetime.utcnow() + timedelta(hours=5)
-    if now.weekday() in [5, 6]:  # skip weekends
+    if now.weekday() in [5, 6]:
         return
     send_telegram_message(f"🕒 <b>Pre-NY Alert</b>\nTime (PK): {now.strftime('%Y-%m-%d %H:%M')}\nScanning XAU & BTC...")
     for s in [SYMBOL_XAU, SYMBOL_BTC]:
@@ -224,7 +224,7 @@ def job_pre_alert():
 
 def job_post_open():
     now = datetime.utcnow() + timedelta(hours=5)
-    if now.weekday() in [5, 6]:  # skip weekends
+    if now.weekday() in [5, 6]:
         print("Weekend — no post alert.")
         return
     print(f"Running post-open scan at {now.strftime('%Y-%m-%d %H:%M')} PK...")
