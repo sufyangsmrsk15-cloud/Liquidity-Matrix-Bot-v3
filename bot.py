@@ -17,9 +17,9 @@ from datetime import datetime, timedelta, time as dtime
 from apscheduler.schedulers.background import BackgroundScheduler
 
 # ------------------ CONFIG ------------------
-TELEGRAM_TOKEN = "8287859714:AAF1pSAlSXsa-NlWIwZ4xDcaYcs3KMueu0k"
-TELEGRAM_CHAT_ID = "8410854765"
-TD_API_KEY = "5be1b12e0de6475a850cc5caeea9ac72"
+TELEGRAM_TOKEN = "8278569195:AAGXYxBl1sKXRwCgYURPjcyjKihvZTPb4w8"
+TELEGRAM_CHAT_ID = "5969642968"
+TD_API_KEY = "76354ebb3e514dd29aae42ba73c1ab4a"
 
 SYMBOL_XAU = "XAU/USD"
 SYMBOL_BTC = "BTC/USD"
