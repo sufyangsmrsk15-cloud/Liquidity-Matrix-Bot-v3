@@ -1,3 +1,5 @@
+requests
 python-telegram-bot==20.3
-apscheduler==3.10.1
-pytz==2023.3
+pandas
+schedule
+apscheduler
